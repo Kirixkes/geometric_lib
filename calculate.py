@@ -3,7 +3,9 @@ import square
 
 
 figs = ['circle', 'square']
+'''Фигуры, к которым будут применены функции'''
 funcs = ['perimeter', 'area']
+'''Список функций, которые определены для фигур'''
 sizes = {}
 
 def calc(fig, func, size):
