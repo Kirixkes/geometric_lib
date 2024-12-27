@@ -1,0 +1,41 @@
+name: github-actions
+
+on:
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
+    branches:
+      - main
+      - release
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print User Info
+        run: |
+          echo "ФИО: Алпатов Кирилл Олегович"
+          echo "Номер группы: M3114"
+          echo "Github : Kirixkes"
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.13
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Run tests with unittest
+        run: |
+          python -m unittest discover
+
+      - name: Check code style with flake8
+        run: |
+          pip install flake8
+          flake8 .
