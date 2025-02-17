@@ -32,12 +32,11 @@ jobs:
           pip install flake8
           flake8 .
 
-      - name: List files in the tests directory
+      - name: List directory structure
         run: |
-          ls -R tests
-          
+          ls -R $GITHUB_WORKSPACE
+
       - name: Run tests with unittest
         run: |
-          export PYTHONPATH=$(pwd)
           python -m unittest discover -s tests
 
