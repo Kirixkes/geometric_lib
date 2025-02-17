@@ -30,6 +30,8 @@ if __name__ == "__main__":
     func = ''
     fig = ''
     size = list()
+    default_circle_area = circle.area(1)
+	default_square_area = square.area(1)
 
     while fig not in figs:
         fig = input(f"Enter figure name, available are {figs}:\n")
