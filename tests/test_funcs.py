@@ -4,6 +4,7 @@ from Funcs import circle
 from Funcs import square
 from Funcs import triangle
 
+
 class TestGeometry(unittest.TestCase):
     def test_circle_area(self):
         result = calc('circle', 'area', [5])
@@ -61,6 +62,7 @@ class TestSquareFunctions(unittest.TestCase):
         self.assertEqual(square.perimeter(2), 8)
         self.assertEqual(square.perimeter(5), 20)
 
+
 class TestTriangleFunctions(unittest.TestCase):
     def test_area(self):
         self.assertAlmostEqual(triangle.area(3, 4, 5), 6.0, places=4)
@@ -71,6 +73,7 @@ class TestTriangleFunctions(unittest.TestCase):
         self.assertEqual(triangle.perimeter(3, 4, 5), 12)
         self.assertEqual(triangle.perimeter(5, 5, 5), 15)
         self.assertEqual(triangle.perimeter(10, 10, 10), 30)
+
 
 if __name__ == '__main__':
     unittest.main()
