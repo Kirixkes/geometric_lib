@@ -1,5 +1,6 @@
 import math
 
+
 def area(r):
     if isinstance(r, (int, float)):
         return math.pi * r * r
@@ -12,4 +13,3 @@ def perimeter(r):
         return 2 * math.pi * r
     else:
         print("Wrong input")
-
