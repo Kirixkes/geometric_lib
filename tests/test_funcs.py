@@ -1,8 +1,8 @@
 import unittest
 from Funcs.calculate import calc
-import circle
-import square
-import triangle
+from Funcs import circle
+from Funcs import square
+from Funcs import triangle
 
 class TestGeometry(unittest.TestCase):
     def test_circle_area(self):
