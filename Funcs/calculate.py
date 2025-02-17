@@ -5,8 +5,8 @@ figs = ['circle', 'square']
 funcs = ['perimeter', 'area']
 sizes = {}
 
+
 def calc(fig, func, size):
-    
     assert fig in figs
     assert func in funcs
 
