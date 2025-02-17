@@ -31,9 +31,13 @@ jobs:
         run: |
           pip install flake8
           flake8 .
+
+      - name: List files in the tests directory
+        run: |
+          ls -R tests
           
       - name: Run tests with unittest
         run: |
           export PYTHONPATH=$(pwd)
-          python -m unittest discover -s tests -v
+          python -m unittest discover -s tests
 
