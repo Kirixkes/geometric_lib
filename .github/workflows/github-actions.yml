@@ -30,12 +30,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-
-      - name: Run tests with unittest
-        run: |
-          python -m unittest discover
-
+          
       - name: Check code style with flake8
         run: |
           pip install flake8
           flake8 .
+          
+      - name: Run tests with unittest
+        run: |
+          python -m unittest discover
