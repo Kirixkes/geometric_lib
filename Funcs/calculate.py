@@ -1,5 +1,4 @@
-from Funcs import circle
-from Funcs import square
+from Funcs import *
 
 figs = ['circle', 'square']
 funcs = ['perimeter', 'area']
