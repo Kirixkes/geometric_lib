@@ -34,5 +34,6 @@ jobs:
           
       - name: Run tests with unittest
         run: |
+          export PYTHONPATH=$(pwd)
           python -m unittest discover -s tests -v
 
