@@ -32,10 +32,9 @@ jobs:
           pip install flake8
           flake8 .
 
-      - name: Print current directory and files
+      - name: List directory structure
         run: |
-          pwd
-          ls -R
+          ls -R /home/runner/work/geometric_lib/geometric_lib
 
       - name: Set working directory
         run: |
