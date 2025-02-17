@@ -3,14 +3,10 @@ name: github-actions
 on:
   push:
     branches:
-      - main
-      - release
+      - feat/tests
   pull_request:
     branches:
-      - main
-      - release
-      - develop
-
+      - feat/tests
 jobs:
   build:
     runs-on: ubuntu-latest
