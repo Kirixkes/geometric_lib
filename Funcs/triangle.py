@@ -2,7 +2,7 @@ from math import sqrt
 
 
 def area(a, b, c):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float))
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)) \
     and isinstance(c, (int, float)):
         return sqrt(((a + b + c) / 2) * (((a + b + c) / 2) - a)
                 * (((a + b + c) / 2) - b) * (((a + b + c) / 2) - c))
@@ -11,7 +11,7 @@ def area(a, b, c):
 
 
 def perimeter(a, b, c):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float))
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)) \
     and isinstance(c, (int, float)):
         return a + b + c
     else:
