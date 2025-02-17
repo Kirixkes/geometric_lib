@@ -1,7 +1,7 @@
 from math import sqrt
 
 def area(a, b, c):
-    if isinstance(a,b,c, (int, float)):
+    if isin:
         return sqrt(((a + b + c) / 2) * (((a + b + c) / 2) - a)
                 * (((a + b + c) / 2) - b) * (((a + b + c) / 2) - c))
     else:
