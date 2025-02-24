@@ -1,7 +1,6 @@
 name: github-actions
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,6 +10,7 @@ on:
       - master
       - release
       - develop
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
