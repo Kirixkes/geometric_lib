@@ -1,0 +1,45 @@
+from Funcs import circle
+from Funcs import square
+
+figs = ['circle', 'square']
+funcs = ['perimeter', 'area']
+sizes = {}
+default_circle_area = circle.area(1)
+default_square_area = square.area(1)
+
+
+def calc(fig, func, size):
+    assert fig in figs
+    assert func in funcs
+
+    if not (fig == "circle" or fig == "square"):
+        print("Wrong shape type")
+        return -1
+
+    if not (func == "area" or func == "perimeter"):
+        print("Wrong function name")
+        return -1
+
+    if not isinstance(*size, (int, float)):
+        print("Wrong size type")
+        return -1
+
+    result = eval(f'{fig}.{func}(*{size})')
+    return f'{func} of {fig} is {result}'
+
+
+if __name__ == "__main__":
+    func = ''
+    fig = ''
+    size = list()
+
+    while fig not in figs:
+        fig = input(f"Enter figure name, available are {figs}:\n")
+
+    while func not in funcs:
+        func = input(f"Enter function name, available are {funcs}:\n")
+
+    while len(size) != sizes.get(f"{func}-{fig}", 1):
+        size = list(map(int, input("Input figure sizes").split(' ')))
+
+    print(calc(fig, func, size))
