@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Print User Info
         env:
-          FULL_NAME: "Алпатов Кирилл Олегович" # Переменная для ФИО
+          FULL_NAME: "Алпатов Кирилл Олегович"
           GROUP_NUMBER: "M3114"
         run: |
           echo "ФИО: $FULL_NAME"
