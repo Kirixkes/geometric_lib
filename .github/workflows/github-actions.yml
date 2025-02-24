@@ -3,11 +3,13 @@ name: github-actions
 on:
   push:
     branches:
-      - feat/tests
+      - main
+      - release
   pull_request:
     branches:
-      - feat/tests
-
+      - master
+      - release
+      - develop
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,11 +17,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Print current directory and files
-        run: |
-          pwd
-          ls -R
 
       - name: Set up Python 3.13
         uses: actions/setup-python@v4
