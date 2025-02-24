@@ -15,6 +15,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print User Info
+        env:
+          FULL_NAME: "Алпатов Кирилл Олегович" # Переменная для ФИО
+          GROUP_NUMBER: "M3114"
+        run: |
+          echo "ФИО: $FULL_NAME"
+          echo "Номер группы: $GROUP_NUMBER"
+          echo "GitHub: ${{ github.actor }}"
+    
       - name: Checkout repository
         uses: actions/checkout@v2
 
